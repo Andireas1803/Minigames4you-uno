@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import './styles/main.scss';
 import {Provider} from "react-redux"
 import {configureStore} from "@reduxjs/toolkit"
-import App from './App';
+import App from './pages/App';
 import reportWebVitals from './reportWebVitals';
 
 const store = configureStore({
