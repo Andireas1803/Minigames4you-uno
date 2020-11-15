@@ -1,13 +1,14 @@
 import React from 'react';
+import {Link} from "react-router-dom";
 
-function Navigation() {
+function Navigation() : JSX.Element{
     return (
         <nav>
-            <a href="/create">CREATE LOBBY</a>
-            <a href="/browse">BROWSE</a>
-            <a href="/leaderboards">LEADERBOARDS</a>
-            <a id="login" href="/login">LOG IN</a>
-            <a id="logout" href="/logout">LOG OUT</a>
+            <Link to="/create">CREATE LOBBY</Link>
+            <Link to="/browse">BROWSE</Link>
+            <Link to="/leaderboards">LEADERBOARDS</Link>
+            <Link to="/login">LOG IN</Link>
+            <Link to="/logout">LOG OUT</Link>
         </nav>
     );
 }

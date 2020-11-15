@@ -2,7 +2,7 @@ import React, {useEffect} from 'react';
 import Navigation from "../components/Navigation";
 import '../styles/component.css';
 
-function HomePage() {
+function HomePage(): JSX.Element {
 
     useEffect(() => {
         let rand = Math.floor(Math.random() * 20) + 1;
@@ -38,27 +38,31 @@ function HomePage() {
             }
             nav.classList.add("color-" + bg);
             if (rand === 2 || rand === 5) {
-                document.querySelectorAll("nav a").forEach((item, index) => {
+                document.querySelectorAll("nav a").forEach((item) => {
+                    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
                     // @ts-ignore
                     const text = item.innerText;
-                    item.innerHTML = "<span data-hover='" + text + "'>" + text + "</span>";
+                    item.innerHTML = `<span data-hover='${text}'>${text}</span>`;
                 })
             } else if (rand === 9) {
-                document.querySelectorAll("nav a").forEach((item, index) => {
+                document.querySelectorAll("nav a").forEach((item) => {
+                    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
                     // @ts-ignore
                     const text = item.innerText;
-                    item.innerHTML = "<span>" + text + "</span><span>" + text + "</span>"
+                    item.innerHTML = `<span>${text}</span><span>${text}</span>`
                 })
 
             } else if (rand === 10 || rand === 19 || rand === 20) {
-                document.querySelectorAll("nav a").forEach((item, index) => {
+                document.querySelectorAll("nav a").forEach((item) => {
+                    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
                     // @ts-ignore
                     const text = item.innerText;
-                    item.innerHTML = ("<span>" + text + "</span>")
+                    item.innerHTML = `<span>${text}</span>`;
                     item.setAttribute("data-hover", text);
                 })
             } else if (rand === 11 || rand === 15 || rand === 16 || rand === 17 || rand === 18) {
-                document.querySelectorAll("nav a").forEach((item, index) => {
+                document.querySelectorAll("nav a").forEach((item) => {
+                    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
                     // @ts-ignore
                     const text = item.innerText;
                     item.setAttribute("data-hover", text);
